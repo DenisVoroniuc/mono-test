@@ -3,10 +3,15 @@
   "private": true,
   "version": "0.1.0",
   "scripts": {
+    "produce:order": "tsx publish-order.ts",
+    "consume:orders": "tsx consume-orders.ts",
     "dev": "tsx watch index.ts",
     "build": "tsc -p tsconfig.json",
     "start": "node dist/index.js",
     "lint": "eslint . --ext .ts",
     "typecheck": "tsc -p tsconfig.json --noEmit"
+  },
+  "dependencies": {
+    "kafkajs": "^2.2.4"
   }
 }
